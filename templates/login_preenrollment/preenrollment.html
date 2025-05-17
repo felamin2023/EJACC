@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARES Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex w-full h-screen items-center justify-start bg-gray1">
+    <div
+      id="left-panel"
+      class="flex flex-col h-screen items-center justify-between py-5 bg-[#749AB6] w-[25%]"
+    >
+      <div class="flex flex-col gap-5">
+        <img
+          src="../../static/images/logo_white_text.png"
+          alt="RAFFI LOGO"
+          class="h-16 w-16"
+        />
+        <h1 class="text-4xl font-bold text-white">
+          Welcome!<br />
+          to the CARES<br />Platform
+        </h1>
+        <p class="text-white text-sm">
+          Providing seamless and efficient<br />
+          care for cancer patients
+        </p>
+      </div>
+
+      <img
+        src="../../static/images/registration/patientdoc.png"
+        alt="Patient Doc picture"
+        class="w-[75%]"
+      />
+    </div>
+    <div
+      id="step1_page"
+      class="h-screen w-[75%] flex flex-col gap-12 bg-[#F5F7F9] py-12 px-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Patient Profile</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 01/02</p>
+          <h1 class="font-bold text-[#6B7280]">General Data</h1>
+        </div>
+      </div>
+      <form
+        action=""
+        method="post"
+        class="bg-white p-9 flex flex-col gap-10 rounded-2xl"
+      >
+        <h1 id="details_title" class="font-bold text-2xl">Patient Name</h1>
+        <div class="grid grid-cols-2 gap-x-10 gap-y-5">
+          <div class="flex gap-2 flex-col">
+            <label class="">First Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Middle Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Last Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Date of Birth</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="date"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="Select date"
+              />
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Age</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Sex</label>
+            <div class="relative">
+              <select
+                class="border-[#6B7280] w-full border-[1px] rounded-md p-2 bg-white appearance-none pr-8"
+              >
+                <!--  onchange="this.classList.remove('text-[#d4d4d4]ssss')" -->
+                <option value="" disabled selected>Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Civil Status</label>
+            <div class="relative">
+              <select
+                class="border-[#6B7280] w-full border-[1px] rounded-md p-2 bg-white appearance-none pr-8"
+              >
+                <option value="" disabled selected>Select</option>
+                <option value="single">Single</option>
+                <option value="cohabitation">Co-Habitation</option>
+                <option value="separated">Separated</option>
+                <option value="widow">Widow/er</option>
+                <option value="married">Married</option>
+                <option value="annulled">Annulled</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Number of Children</label>
+            <input
+              type="number"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-10">
+          <div class="flex flex-col gap-5">
+            <h1 class="font-bold text-2xl">Contact & Address</h1>
+            <div class="grid grid-cols-2 gap-x-10 gap-y-5">
+              <div class="flex gap-2 flex-col col-span-2">
+                <label class="">Permanent Address (Number & Street)</label>
+                <input
+                  type="text"
+                  class="border-[#6B7280] border-[1px] rounded-md p-2"
+                />
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">City/Municipality</label>
+                <div class="relative">
+                  <select
+                    id="cityMunicipality"
+                    class="border-[#6B7280] w-full border-[1px] rounded-md p-2 bg-white appearance-none pr-8"
+                    onchange="updateBarangays()"
+                  >
+                    <option value="" disabled selected>
+                      Select City/Municipality
+                    </option>
+                    <option value="cebu_city">Cebu City</option>
+                    <option value="mandaue">Mandaue City</option>
+                    <option value="lapu_lapu">Lapu-Lapu City</option>
+                    <option value="talisay">Talisay City</option>
+                    <option value="danao">Danao City</option>
+                    <option value="toledo">Toledo City</option>
+                    <option value="carcar">Carcar City</option>
+                    <option value="naga">Naga City</option>
+                    <option value="bogo">Bogo City</option>
+                    <option value="argao">Argao</option>
+                    <option value="badian">Badian</option>
+                    <option value="balamban">Balamban</option>
+                    <option value="bantayan">Bantayan</option>
+                    <option value="barili">Barili</option>
+                    <option value="consolacion">Consolacion</option>
+                    <option value="cordova">Cordova</option>
+                    <option value="dalaguete">Dalaguete</option>
+                    <option value="liloan">Liloan</option>
+                    <option value="minglanilla">Minglanilla</option>
+                    <option value="moalboal">Moalboal</option>
+                    <option value="oslob">Oslob</option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  >
+                    <svg
+                      class="fill-current h-4 w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">Barangay</label>
+                <div class="relative">
+                  <select
+                    id="barangayDropdown"
+                    class="border-[#6B7280] w-full border-[1px] rounded-md p-2 bg-white appearance-none pr-8"
+                  >
+                    <option value="" disabled selected>
+                      Select City/Municipality
+                    </option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  >
+                    <svg
+                      class="fill-current h-4 w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="text-[#6B7280]"
+                  >Landline Number/Mobile Number</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <!-- Telephone base -->
+                      <path
+                        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 1.33 0.26 2.61 0.74 3.77l-1.12 4.21c-0.15 0.54 0.32 1.02 0.87 0.87l4.21-1.12C7.87 20.74 9.15 21 10.48 21c5.52 0 10-4.48 10-10z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="0"
+                        fill="none"
+                      ></path>
+                      <!-- Telephone receiver/handset -->
+                      <path
+                        d="M15 8h.01M9 8h.01M11 8h2"
+                        stroke="currentColor"
+                        stroke-width="0"
+                      ></path>
+                      <!-- Traditional telephone shape -->
+                      <path
+                        d="M3 5a2 2 0 0 1 2-2h3.28a1 1 0 0 1 .948.684l1.498 4.493a1 1 0 0 1-.502 1.21l-2.257 1.13a11.042 11.042 0 0 0 5.516 5.516l1.13-2.257a1 1 0 0 1 1.21-.502l4.493 1.498a1 1 0 0 1 .684.949V19a2 2 0 0 1-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="tel"
+                    class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">Email</label>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="email"
+                    class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                    placeholder="ejacc@gmail.com"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h1 class="font-bold text-2xl">Additional Info</h1>
+            <div class="grid grid-cols-2 gap-x-10 gap-y-5">
+              <div class="flex gap-2 flex-col col-span-2">
+                <label class=""
+                  >Source of Information (Where did you hear about
+                  RAFI-EJACC?):</label
+                >
+                <textarea
+                  name=""
+                  id=""
+                  class="border-[#6B7280] border-[1px] rounded-md p-2 h-36 w-[60%] resize-none"
+                ></textarea>
+              </div>
+              <div class="flex gap-2 flex-col col-span-2">
+                <label class="">Other RAFI programs you availed:</label>
+                <textarea
+                  name=""
+                  id=""
+                  class="border-[#6B7280] border-[1px] rounded-md p-2 h-36 w-[60%] resize-none"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h1 class="font-bold text-2xl">Socioeconomic Info</h1>
+            <div class="grid grid-cols-2 gap-x-10 gap-y-5">
+              <div class="flex gap-2 flex-col">
+                <label class="">Highest Educational Attainment</label>
+                <input
+                  type="text"
+                  class="border-[#6B7280] border-[1px] rounded-md p-2"
+                />
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">Occupation</label>
+                <input
+                  type="text"
+                  class="border-[#6B7280] border-[1px] rounded-md p-2"
+                />
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">Source of Income</label>
+                <input
+                  type="text"
+                  class="border-[#6B7280] border-[1px] rounded-md p-2"
+                />
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">Income</label>
+                <input
+                  type="text"
+                  class="border-[#6B7280] border-[1px] rounded-md p-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h1 class="font-bold text-2xl">Emergency Contact 1</h1>
+            <div class="grid grid-cols-2 gap-x-10 gap-y-5">
+              <div class="flex gap-2 flex-col">
+                <label class="">Name</label>
+                <input
+                  type="text"
+                  class="border-[#6B7280] border-[1px] rounded-md p-2"
+                />
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">Address</label>
+                <input
+                  type="text"
+                  class="border-[#6B7280] border-[1px] rounded-md p-2"
+                />
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">Relationship to Patient</label>
+                <input
+                  type="text"
+                  class="border-[#6B7280] border-[1px] rounded-md p-2"
+                />
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="">Email</label>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="email"
+                    class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                    placeholder="ejacc@gmail.com"
+                  />
+                </div>
+              </div>
+
+              <div class="flex gap-2 flex-col">
+                <label class="text-[#6B7280]">Landline Number</label>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <!-- Telephone base -->
+                      <path
+                        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 1.33 0.26 2.61 0.74 3.77l-1.12 4.21c-0.15 0.54 0.32 1.02 0.87 0.87l4.21-1.12C7.87 20.74 9.15 21 10.48 21c5.52 0 10-4.48 10-10z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="0"
+                        fill="none"
+                      ></path>
+                      <!-- Telephone receiver/handset -->
+                      <path
+                        d="M15 8h.01M9 8h.01M11 8h2"
+                        stroke="currentColor"
+                        stroke-width="0"
+                      ></path>
+                      <!-- Traditional telephone shape -->
+                      <path
+                        d="M3 5a2 2 0 0 1 2-2h3.28a1 1 0 0 1 .948.684l1.498 4.493a1 1 0 0 1-.502 1.21l-2.257 1.13a11.042 11.042 0 0 0 5.516 5.516l1.13-2.257a1 1 0 0 1 1.21-.502l4.493 1.498a1 1 0 0 1 .684.949V19a2 2 0 0 1-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="tel"
+                    class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-2 flex-col">
+                <label class="text-[#6B7280]">Phone Number</label>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="5"
+                        y="2"
+                        width="14"
+                        height="20"
+                        rx="2"
+                        ry="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></rect>
+                      <line
+                        x1="12"
+                        y1="18"
+                        x2="12"
+                        y2="18"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></line>
+                      <line
+                        x1="8"
+                        y1="5"
+                        x2="16"
+                        y2="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></line>
+                    </svg>
+                  </div>
+                  <input
+                    type="tel"
+                    class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end w-full mt-10">
+          <a
+            id="patient_profile_nextbtn"
+            class="text-center font-bold bg-[#749AB6] text-white py-2 w-[45%] border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            Next
+          </a>
+        </div>
+      </form>
+    </div>
+    <div
+      id="step2_page"
+      class="hidden h-screen w-[75%] flex flex-col gap-12 bg-[#F5F7F9] py-12 px-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Patient Profile</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 02/02</p>
+          <h1 class="font-bold text-[#6B7280]">Cancer Data</h1>
+        </div>
+      </div>
+      <form
+        action=""
+        method="post"
+        class="bg-white p-9 flex flex-col gap-10 rounded-2xl"
+      >
+        <div>
+          <h1 id="details_title" class="font-bold text-xl">Referral</h1>
+          <div class="grid grid-cols-2 gap-x-10 gap-y-5">
+            <div class="flex gap-2 flex-col">
+              <label>Referred From</label>
+              <input
+                type="text"
+                class="border-[#6B7280] border-[1px] rounded-md p-2"
+              />
+            </div>
+            <div class="flex gap-2 flex-col">
+              <label>Name of Referring Doctor / Facility</label>
+              <input
+                type="text"
+                class="border-[#6B7280] border-[1px] rounded-md p-2"
+              />
+            </div>
+            <div class="flex gap-2 flex-col">
+              <label>Reason for Referral</label>
+              <textarea
+                class="border-[#6B7280] border-[1px] rounded-md p-2 resize-none h-28"
+              ></textarea>
+            </div>
+            <div class="flex gap-2 flex-col">
+              <label>Chief Complaint</label>
+              <input
+                type="text"
+                class="border-[#6B7280] border-[1px] rounded-md p-2 resize-none h-28"
+              />
+            </div>
+            <div class="flex gap-2 flex-col">
+              <label>Date of Consultation / Admission</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="date"
+                  class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                  placeholder="Select date"
+                />
+              </div>
+            </div>
+            <div class="flex gap-2 flex-col">
+              <label>Date of Diagnosis</label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="date"
+                  class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                  placeholder="Select date"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 id="details_title" class="font-bold text-xl">Diagnosis</h1>
+          <p class="text-[#6B7280]">Most Valid Basis of Diagnosis:</p>
+          <div class="grid grid-cols-3 gap-x-10 gap-y-5">
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Non Microscopic</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Death Certificates Only </label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Clinical Investigation</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Specific Tumors Makers</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Microscopic</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Cytology or Hermotology</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Histology of Metastasis</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Histology of Primary</label>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5">
+          <p class="text-[#6B7280]">Multiple Primaries</p>
+          <div class="grid grid-cols-3 gap-x-10 gap-y-5 w-fit">
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">1</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">2</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">3</label>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5">
+          <p class="text-[#6B7280]">Primary Sites</p>
+          <div
+            class="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-x-10 gap-y-5"
+          >
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Colon</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Brain</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Bladder</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Skin</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Kidney</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Testis</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Liver</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Corpus Uteri</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Urinary</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Prostate</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Nasopharnyx</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Oral Cavity</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Ovary</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Lung</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Gull</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Thyroid</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Rectum</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Blood</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Stomach</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Pancreas</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Esophagus</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Breast</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Uterine Cervix</label>
+            </div>
+          </div>
+          <div>
+            <p>
+              Other's, specify
+              <input type="text" class="border-b-[1px] border-[#000]" />
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5">
+          <p class="text-[#6B7280]">Laterality</p>
+          <div class="flex flex-col gap-3">
+            <div class="flex gap-3 items-center">
+              <input type="radio" id="left" name="option" class="peer hidden" />
+              <label
+                for="left"
+                class="relative w-6 h-6 rounded-full border-[1px] border-[#6B7280] flex items-center justify-center cursor-pointer peer-checked:border-[2px] peer-checked:border-[#749AB6] peer-checked:before:content-[''] peer-checked:before:absolute peer-checked:before:w-4 peer-checked:before:h-4 peer-checked:before:rounded-full peer-checked:before:bg-[#749AB6]"
+              >
+              </label>
+              <span>Left</span>
+            </div>
+            <div class="flex gap-3 items-center">
+              <input
+                type="radio"
+                id="right"
+                name="option"
+                class="peer hidden"
+              />
+              <label
+                for="right"
+                class="relative w-6 h-6 rounded-full border-[1px] border-[#6B7280] flex items-center justify-center cursor-pointer peer-checked:border-[2px] peer-checked:border-[#749AB6] peer-checked:before:content-[''] peer-checked:before:absolute peer-checked:before:w-4 peer-checked:before:h-4 peer-checked:before:rounded-full peer-checked:before:bg-[#749AB6]"
+              >
+              </label>
+              <span>Right</span>
+            </div>
+            <div class="flex gap-3 items-center">
+              <input
+                type="radio"
+                id="notsated"
+                name="option"
+                class="peer hidden"
+              />
+              <label
+                for="notsated"
+                class="relative w-6 h-6 rounded-full border-[1px] border-[#6B7280] flex items-center justify-center cursor-pointer peer-checked:border-[2px] peer-checked:border-[#749AB6] peer-checked:before:content-[''] peer-checked:before:absolute peer-checked:before:w-4 peer-checked:before:h-4 peer-checked:before:rounded-full peer-checked:before:bg-[#749AB6]"
+              >
+              </label>
+              <span>Not stated</span>
+            </div>
+            <div class="flex gap-3 items-center">
+              <input
+                type="radio"
+                id="bilateral"
+                name="option"
+                class="peer hidden"
+              />
+              <label
+                for="bilateral"
+                class="relative w-6 h-6 rounded-full border-[1px] border-[#6B7280] flex items-center justify-center cursor-pointer peer-checked:border-[2px] peer-checked:border-[#749AB6] peer-checked:before:content-[''] peer-checked:before:absolute peer-checked:before:w-4 peer-checked:before:h-4 peer-checked:before:rounded-full peer-checked:before:bg-[#749AB6]"
+              >
+              </label>
+              <span>Bilateral</span>
+            </div>
+            <div class="flex gap-3 items-center">
+              <input type="radio" id="mild" name="option" class="peer hidden" />
+              <label
+                for="mild"
+                class="relative w-6 h-6 rounded-full border-[1px] border-[#6B7280] flex items-center justify-center cursor-pointer peer-checked:border-[2px] peer-checked:border-[#749AB6] peer-checked:before:content-[''] peer-checked:before:absolute peer-checked:before:w-4 peer-checked:before:h-4 peer-checked:before:rounded-full peer-checked:before:bg-[#749AB6]"
+              >
+              </label>
+              <span>Mild</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-x-10 gap-y-5">
+          <div class="flex gap-2 col-span-2 flex-col">
+            <label class="text-[#6B7280]">Histology(Morphology)</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Staging</label>
+            <div class="relative">
+              <select
+                class="border-[#6B7280] w-full border-[1px] rounded-md p-2 bg-white appearance-none pr-8"
+              >
+                <option value="" disabled selected>Select</option>
+                <option value="">In-Situ</option>
+                <option value="">Localized</option>
+                <option value="">Direct Extension</option>
+                <option value="">Regional Lymph Node</option>
+                <option value="">3+4</option>
+                <option value="">Distant Metastasis</option>
+                <option value="">Unknown</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280] h-10">TNM System</label>
+            <p>T__________ N__________ M__________</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5">
+          <p class="text-[#6B7280]">Primary Sites</p>
+          <div class="grid grid-cols-3 gap-x-10 gap-y-5">
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">None</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Destant Lymph Nodes</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Bone</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Liver(Pleura)</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Kidney</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Brain</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Ovary</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Skin</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Prostate</label>
+            </div>
+            <div class="flex gap-5 justify-center items-center w-fit">
+              <input
+                type="checkbox"
+                class="w-4 h-4 accent-[#749AB6] bg-[#749AB6] border-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="">Unkwon</label>
+            </div>
+          </div>
+          <div>
+            <p>
+              Other's, specify
+              <input type="text" class="border-b-[1px] border-[#000]" />
+            </p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <div class="flex flex-col gap-5">
+              <label for="" class="text-sm text-[#6B7280]"
+                >Final Diagnosis</label
+              >
+              <textarea
+                name=""
+                id=""
+                class="border-[#6B7280] border-[1px] rounded-md p-2 h-36 w-[60%] resize-none"
+              ></textarea>
+            </div>
+            <div class="flex flex-col gap-5 w-[50%]">
+              <label for="" class="text-sm text-[#6B7280]"
+                >Final Diagnosis: ICD-10 Code</label
+              >
+              <input
+                type="text"
+                class="border-[#6B7280] border-[1px] rounded-md p-2"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl font-bold">Treatment</h1>
+          <p class="text-[#6B7280] text-sm">Treatment Purposes</p>
+          <div class="flex flex-col gap-3">
+            <div class="flex gap-3 items-center">
+              <input
+                type="radio"
+                id="curativeComplete"
+                name="option"
+                class="peer hidden"
+              />
+              <label
+                for="curativeComplete"
+                class="relative w-6 h-6 rounded-full border-[1px] border-[#6B7280] flex items-center justify-center cursor-pointer peer-checked:border-[2px] peer-checked:border-[#749AB6] peer-checked:before:content-[''] peer-checked:before:absolute peer-checked:before:w-4 peer-checked:before:h-4 peer-checked:before:rounded-full peer-checked:before:bg-[#749AB6]"
+              >
+              </label>
+              <span>Curative-Complete</span>
+            </div>
+            <div class="flex gap-3 items-center">
+              <input
+                type="radio"
+                id="curativeIncomplete"
+                name="option"
+                class="peer hidden"
+              />
+              <label
+                for="curativeIncomplete"
+                class="relative w-6 h-6 rounded-full border-[1px] border-[#6B7280] flex items-center justify-center cursor-pointer peer-checked:border-[2px] peer-checked:border-[#749AB6] peer-checked:before:content-[''] peer-checked:before:absolute peer-checked:before:w-4 peer-checked:before:h-4 peer-checked:before:rounded-full peer-checked:before:bg-[#749AB6]"
+              >
+              </label>
+              <span>Curative-Incomplete</span>
+            </div>
+            <div class="flex gap-3 items-center">
+              <input
+                type="radio"
+                id="palliative"
+                name="option"
+                class="peer hidden"
+              />
+              <label
+                for="palliative"
+                class="relative w-6 h-6 rounded-full border-[1px] border-[#6B7280] flex items-center justify-center cursor-pointer peer-checked:border-[2px] peer-checked:border-[#749AB6] peer-checked:before:content-[''] peer-checked:before:absolute peer-checked:before:w-4 peer-checked:before:h-4 peer-checked:before:rounded-full peer-checked:before:bg-[#749AB6]"
+              >
+              </label>
+              <span>Palliative Only</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-[#6B7280] text-sm">
+              Other's, specify
+              <input type="text" class="border-b-[1px] border-[#000]" />
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-5 w-full">
+          <div class="flex gap-2 flex-col w-full">
+            <label class="text-[#6B7280] text-sm"
+              >Primary Assistance by RAFI-ELACC</label
+            >
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col w-full">
+            <label class="text-[#6B7280] text-sm">Date of Assistance</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="date"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="Select date"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <p class="text-sm text-[#6B7280]">
+            Planned Additional/Adjuvant Treatment/s actually received from
+            RAFI-EJACC
+          </p>
+
+          <div class="flex flex-wrap gap-x-8 gap-y-3">
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="surgery"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="surgery" class="text-[#374151] text-sm"
+                >Surgery</label
+              >
+            </div>
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="radiotherapy"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="radiotherapy" class="text-[#374151] text-sm"
+                >Radiotherapy</label
+              >
+            </div>
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="chemotherapy"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="chemotherapy" class="text-[#374151] text-sm"
+                >Chemotherapy</label
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-x-8 gap-y-3">
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="immunotherapy"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="immunotherapy" class="text-[#374151] text-sm">
+                Immunotherapy/Cytrotherapy
+              </label>
+            </div>
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="hormonal"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="hormonal" class="text-[#374151] text-sm"
+                >Hormonal</label
+              >
+            </div>
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="unknown"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="unknown" class="text-[#374151] text-sm"
+                >Unknown</label
+              >
+            </div>
+          </div>
+          <div>
+            <p class="text-[#6B7280] text-sm">
+              Other's, specify
+              <input
+                type="text"
+                class="border-b-[1px] border-[#000] focus:outline-none"
+              />
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <p class="text-sm text-[#6B7280]">
+            Treatment/s received from other sources
+          </p>
+
+          <div class="flex flex-wrap gap-x-8 gap-y-3">
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="surgery"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="surgery" class="text-[#374151] text-sm"
+                >Surgery</label
+              >
+            </div>
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="radiotherapy"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="radiotherapy" class="text-[#374151] text-sm"
+                >Radiotherapy</label
+              >
+            </div>
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="chemotherapy"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="chemotherapy" class="text-[#374151] text-sm"
+                >Chemotherapy</label
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-x-8 gap-y-3">
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="immunotherapy"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="immunotherapy" class="text-[#374151] text-sm">
+                Immunotherapy/Cytrotherapy
+              </label>
+            </div>
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="hormonal"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="hormonal" class="text-[#374151] text-sm"
+                >Hormonal</label
+              >
+            </div>
+            <div class="flex items-center gap-2 w-fit">
+              <input
+                type="checkbox"
+                id="unknown"
+                class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+              />
+              <label for="unknown" class="text-[#374151] text-sm"
+                >Unknown</label
+              >
+            </div>
+          </div>
+          <div>
+            <p class="text-[#6B7280] text-sm">
+              Other's, specify
+              <input
+                type="text"
+                class="border-b-[1px] border-[#000] focus:outline-none"
+              />
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start gap-5">
+          <h1 class="text-2xl font-bold">Consent and Privacy</h1>
+          <div class="flex justify-center items-center gap-5">
+            <input
+              type="checkbox"
+              class="w-4 h-4 accent-[#749AB6] text-white rounded focus:ring-[#749AB6]"
+            />
+            <label for="" class="underline"
+              >Form notice & Data privacy notice</label
+            >
+          </div>
+        </div>
+        <div class="flex w-full justify-between gap-8">
+          <button
+            class="text-black text-center py-2 w-full border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            Back
+          </button>
+          <a
+            href="../mainpage.html"
+            class="bg-[#749AB6] text-center font-bold text-white py-2 w-full border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            Submit
+          </a>
+        </div>
+      </form>
+    </div>
+    <script src="../../static/js/preenrollment/preenrollment.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    .custom-shadow {
+      @apply shadow-lg;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+  <body class="flex w-full h-screen items-center justify-start bg-gray1">
+    <div
+      class="flex flex-col h-screen items-center justify-between py-5 bg-[#749AB6] w-[25%]"
+    >
+      <div class="flex flex-col gap-5">
+        <img
+          src="../../static/images/logo_white_text.png"
+          alt="RAFFI LOGO"
+          class="h-16 w-16"
+        />
+        <h1 class="text-4xl font-bold text-white">
+          Welcome!<br />
+          to the CARES<br />Platform
+        </h1>
+        <p class="text-white text-sm">
+          Providing seamless and efficient<br />
+          care for cancer patients
+        </p>
+      </div>
+
+      <img
+        src="../../static/images/registration/patientdoc.png"
+        alt="Patient Doc picture"
+        class="w-[75%] h-"
+      />
+    </div>
+    <div
+      id="fill_up_form"
+      class="h-screen w-[75%] flex flex-col gap-8 bg-[#F5F7F9] p-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Beneficiary registration</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 03/06</p>
+          <h1 class="font-bold text-[#6B7280]">Apply</h1>
+        </div>
+      </div>
+      <div class="bg-white p-5 flex flex-col gap-5 rounded-2xl p-9">
+        <h1 class="text-2xl">
+          Hi <span class="underline">Jane!</span> 👋 What kind of support are
+          you looking for today?
+        </h1>
+        <p class="text-[#6B7280]">Select the service you want to apply for.</p>
+        <div class="flex items-center justify-around gap-7">
+          <div
+            class="h-[100%] w-full custom-shadow p-5 rounded-lg flex flex-col items-center justify-between gap-4"
+          >
+            <img
+              src="../../static/images/registration/capsule_icon.png"
+              alt="CAPSULE ICON"
+              class="w-10 h-10"
+            />
+            <h1 class="font-bold text-2xl">Screening and Diagnostics</h1>
+            <p class="text-center">
+              Get tested for early signs of cancer<br />
+              through medical checkups, labs, and<br />
+              imaging. Ideal for those with symptoms or<br />
+              at-risk individuals.
+            </p>
+            <a
+              href="../registration/registrationStep4A.html"
+              class="text-center bg-[#749AB6] text-white py-2 w-[55%] border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+              >Apply</a
+            >
+          </div>
+          <div
+            class="h-[100%] w-full custom-shadow p-5 rounded-lg flex flex-col items-center justify-between gap-4"
+          >
+            <img
+              src="../../static/images/registration/sandtimericon.png"
+              alt="CAPSULE ICON"
+              class="w-10 h-10"
+            />
+            <h1 class="text-center font-bold text-2xl">
+              Cancer Management<br />
+              and Survivorship
+            </h1>
+            <p class="text-center">
+              For patients currently undergoing or done <br />
+              with treatment. We help you manage your <br />
+              care, follow-ups, and survivorship<br />
+              journey.
+            </p>
+            <a
+              href="../registration/registrationStep4B.html"
+              class="text-center bg-[#749AB6] text-white py-2 w-[55%] border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+              >Apply</a
+            >
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <a
+            href="../registration/registration.html"
+            class="text-black text-center text-lg py-2 w-[45%] border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+            >Back</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

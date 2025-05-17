@@ -1,0 +1,219 @@
+<style>
+  .custom-shadow {
+    @apply shadow-lg;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<div class="h-screen overflow-auto bg-[#000]">
+  <div class="bg-white py-4 px-10 flex justify-between items-center border-b">
+    <div class="font-medium">Beneficary</div>
+    <div
+      class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white"
+    >
+      <img
+        src="../../static/images/Avatar.png"
+        alt="User Profile"
+        class="rounded-full"
+      />
+    </div>
+  </div>
+
+  <div class="px-10 h-[89%] p-5 bg-[#F0F2F5]">
+    <div class="bg-white flex flex-col gap-3 py-5 px-5 rounded-lg h-full">
+      <h2 class="text-xl font-semibold text-gray-700 mb-4">My Applications</h2>
+      <hr class="border-2 border-[#749AB6]" />
+
+      <div class="flex justify-between">
+        <input
+          type="text"
+          placeholder="Search by application ID or service type..."
+          class="border-[1px] border-[#E1E4E8] py-2 w-[50%] px-5 rounded-md"
+        />
+        <select
+          class="border-[1px] border-[#E1E4E8] rounded-md p-2 bg-white appearance-none pr-8"
+        >
+          <option value="" disabled selected>Filter by Status</option>
+          <option value="">Pending</option>
+          <option value="">Requirements</option>
+          <option value="">Approved</option>
+        </select>
+        <input
+          type="date"
+          class="border-[1px] border-[#E1E4E8] py-2 px-5 rounded-md"
+        />
+        <button class="bg-[#C5D7E5] px-7 rounded-md">Filter</button>
+      </div>
+      <div class="flex bg-[#F0F2F5]">
+        <button class="bg-[#C5D7E5] py-2 w-full rounded-md">
+          Active Applications
+        </button>
+        <button
+          class="hover:bg-[#C5D7E5] text-[#666666] py-2 w-full rounded-md"
+        >
+          Completed Applications
+        </button>
+        <button
+          class="hover:bg-[#C5D7E5] text-[#666666] py-2 w-full rounded-md"
+        >
+          Rejected Applications
+        </button>
+        <button
+          class="hover:bg-[#C5D7E5] text-[#666666] py-2 w-full rounded-md"
+        >
+          Draft Applications
+        </button>
+      </div>
+      <div class="overflow-x-auto bg-white shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead>
+            <tr class="bg-[#F0F2F5]">
+              <th
+                scope="col"
+                class="w-[13%] text-center text-sm border-[1px] py-3"
+              >
+                Application ID
+              </th>
+              <th scope="col" class="w-[20%] border-[1px] text-sm py-3">
+                Service Type
+              </th>
+              <th
+                scope="col"
+                class="w-[15%] border-[1px] py-3 text-center text-sm"
+              >
+                Submission Date
+              </th>
+              <th
+                scope="col"
+                class="w-[15%] border-[1px] border-2 py-3 text-center text-sm"
+              >
+                Status
+              </th>
+              <th
+                scope="col"
+                class="w-[15%] border-[1px] py-3 text-center text-sm"
+              >
+                Last Updated
+              </th>
+              <th
+                scope="col"
+                class="w-full border-2 border-[1px] py-3 text-center text-sm tracking-wider"
+              >
+                Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="w-[13%] py-2 text-sm text-center text-[#333333]">
+                APP-2025-001
+              </td>
+              <td class="w-[20%] py-2 text-sm text-center text-[#333333]">
+                Cancer Screening
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                4/12/2025
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                <span
+                  class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-[#FFEFD5] text-[#FF8C00]"
+                  >Pending</span
+                >
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                4/12/2025
+              </td>
+              <td
+                class="w-full flex py-2 gap-2 px-2 justify-around text-sm text-center text-[#333333]"
+              >
+                <a
+                  href="#"
+                  class="custom-shadow text-white bg-[#749AB6] py-[5px] rounded-md px-2"
+                  >Contact</a
+                >
+                <a
+                  href="#"
+                  class="custom-shadow text-[#749AB6] bg-[#fff] py-[5px] rounded-md px-3"
+                  >View</a
+                >
+                <a
+                  href="#"
+                  class="custom-shadow text-white bg-[red] py-[5px] rounded-md px-2"
+                  >Cancel</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="w-[13%] py-2 text-sm text-center text-[#333333]">
+                APP-2025-002
+              </td>
+              <td class="w-[20%] py-2 text-sm text-center text-[#333333]">
+                Treatment Assistance
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                4/12/2025
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                <span
+                  class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-[#E6F7FF] text-[#0076D6]"
+                  >Requirements</span
+                >
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                4/12/2025
+              </td>
+              <td
+                class="w-full flex py-2 gap-1 px-1 justify-around text-sm text-center text-[#333333]"
+              >
+                <a
+                  href="#"
+                  class="custom-shadow text-white bg-[#749AB6] py-[5px] rounded-md px-2"
+                  >Submit Documents</a
+                >
+                <a
+                  href="#"
+                  class="custom-shadow text-[#749AB6] bg-[#fff] py-[5px] rounded-md px-3"
+                  >View</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="w-[13%] py-2 text-sm text-center text-[#333333]">
+                APP-2025-003
+              </td>
+              <td class="w-[20%] py-2 text-sm text-center text-[#333333]">
+                Individual Screening
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                4/12/2025
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                <span
+                  class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-[#E8F5E9] text-[#4CAF50]"
+                  >Approved</span
+                >
+              </td>
+              <td class="w-[15%] py-2 text-sm text-center text-[#333333]">
+                4/12/2025
+              </td>
+              <td
+                class="w-full flex py-2 gap-2 px-2 justify-around text-sm text-center text-[#333333]"
+              >
+                <a
+                  href="#"
+                  class="custom-shadow text-white bg-[#749AB6] py-[5px] rounded-md px-2"
+                  >Download LOA</a
+                >
+                <a
+                  href="#"
+                  class="custom-shadow text-[#749AB6] bg-[#fff] py-[5px] rounded-md px-3"
+                  >View</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

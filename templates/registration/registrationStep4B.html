@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex w-full h-screen items-center justify-start bg-gray1">
+    <div
+      class="flex flex-col h-screen items-center justify-between py-5 bg-[#749AB6] w-[25%]"
+    >
+      <div class="flex flex-col gap-5">
+        <img
+          src="../../static/images/logo_white_text.png"
+          alt="RAFFI LOGO"
+          class="h-16 w-16"
+        />
+        <h1 class="text-4xl font-bold text-white">
+          Welcome!<br />
+          to the CARES<br />Platform
+        </h1>
+        <p class="text-white text-sm">
+          Providing seamless and efficient<br />
+          care for cancer patients
+        </p>
+      </div>
+
+      <img
+        src="../../static/images/registration/patientdoc.png"
+        alt="Patient Doc picture"
+        class="w-[75%] h-"
+      />
+    </div>
+    <div
+      id="question_page"
+      class="h-screen w-[75%] flex flex-col gap-8 bg-[#F5F7F9] p-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Beneficiary registration</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 04/07</p>
+          <h1 class="font-bold text-[#6B7280]">
+            Cancer Management<br />
+            & Survivorship
+          </h1>
+        </div>
+      </div>
+      <div class="bg-white p-5 flex flex-col gap-12 rounded-2xl py-9">
+        <h1 class="text-4xl font-bold">
+          Have you undergone consultation with your doctor, preferably an
+          oncologist?
+        </h1>
+        <div class="flex w-full justify-between gap-8">
+          <a
+            href="../registration/registrationStep3.html"
+            class="text-black text-center py-2 w-full border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            NO
+          </a>
+          <a
+            id="question_page_yes_btn"
+            class="bg-[#749AB6] text-center font-bold text-white py-2 w-full border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            YES
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      id="requirement_page"
+      class="hidden h-screen w-[75%] flex flex-col gap-8 bg-[#F5F7F9] p-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Beneficiary registration</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 05/07</p>
+          <h1 class="font-bold text-[#6B7280]">
+            Cancer Management<br />
+            & Survivorship
+          </h1>
+        </div>
+      </div>
+      <div class="bg-white p-5 flex flex-col gap-5 rounded-2xl py-9">
+        <div class="flex flex-col px-5 gap-5">
+          <p>Beating cancer always begins with early detection.</p>
+          <h1 class="text-4xl font-bold">
+            Before we proceed, please take a moment to read our requirement for
+            Cancer management and survivorship.
+          </h1>
+          <p class="text-[#6B7280] text-sm">
+            if you belive you are able to comply with these requirements, click
+            on “Continue”
+          </p>
+          <h1 class="font-bold text-2xl">Requirements:</h1>
+          <div class="grid grid-cols-2 grid-rows-3">
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>Diagnosed with Early-stage Cancer (Stage 0-2)</p>
+            </div>
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>Medical Abstract with Pathological Report</p>
+            </div>
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>Barangay Certificate or Certification of Indigency</p>
+            </div>
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>
+                Patient’s Personal Profile with picture and illustrated/drawn
+                sketch of adobe/address
+              </p>
+            </div>
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>
+                Letter of request addressed to: Giselle Marie H. Gaviola, M.D.
+                Program Director for Health RAFi
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex w-full justify-between mt-10 gap-8">
+          <a
+            id="requirement_page_cantcomply_btn"
+            class="text-black text-center py-2 w-full border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            I can’t comply
+          </a>
+          <a
+            id="requirement_page_continue_btn"
+            class="bg-[#749AB6] text-center font-bold text-white py-2 w-full border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            Continue
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      id="question2_page"
+      class="hidden h-screen w-[75%] flex flex-col gap-8 bg-[#F5F7F9] p-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Beneficiary registration</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 06/07</p>
+          <h1 class="font-bold text-[#6B7280]">
+            Cancer Management<br />
+            & Surviroship
+          </h1>
+        </div>
+      </div>
+      <div class="bg-white p-5 flex flex-col gap-12 rounded-2xl py-9">
+        <div class="flex flex-col px-5 gap-5">
+          <h1 class="font-bold text-2xl">
+            What type of cancer are you currently diagnosed with?
+          </h1>
+          <p class="text-[#6B7280] text-sm">
+            (ex. Breast cancer, prostate cancer, etc.)
+          </p>
+          <input
+            type="text"
+            class="border-b border-b-[#000] w-[60%] py-3 focus:outline-none"
+            placeholder="Type your answer here..."
+          />
+        </div>
+        <div class="flex w-full justify-between gap-8">
+          <a
+            id="question2_back_btn"
+            class="text-black text-center py-2 w-full border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            Back
+          </a>
+          <a
+            href="../login_preenrollment/login.html"
+            id="question2_submit_btn"
+            class="bg-[#749AB6] text-center font-bold text-white py-2 w-full border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            Submit
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="../../static/js/login_registration/registrationStep4B.js"></script>
+  </body>
+</html>

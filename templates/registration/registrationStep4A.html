@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex w-full h-screen items-center justify-start bg-gray1">
+    <div
+      class="flex flex-col h-screen items-center justify-between py-5 bg-[#749AB6] w-[25%]"
+    >
+      <div class="flex flex-col gap-5">
+        <img
+          src="../../static/images/logo_white_text.png"
+          alt="RAFFI LOGO"
+          class="h-16 w-16"
+        />
+        <h1 class="text-4xl font-bold text-white">
+          Welcome!<br />
+          to the CARES<br />Platform
+        </h1>
+        <p class="text-white text-sm">
+          Providing seamless and efficient<br />
+          care for cancer patients
+        </p>
+      </div>
+
+      <img
+        src="../../static/images/registration/patientdoc.png"
+        alt="Patient Doc picture"
+        class="w-[75%] h-"
+      />
+    </div>
+    <div
+      id="requirements_page"
+      class="h-screen w-[75%] flex flex-col gap-8 bg-[#F5F7F9] p-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Beneficiary registration</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 04/06</p>
+          <h1 class="font-bold text-[#6B7280]">
+            Screening and<br />
+            Diagnostics
+          </h1>
+        </div>
+      </div>
+      <div class="bg-white p-5 flex flex-col gap-12 rounded-2xl py-9">
+        <div class="flex flex-col px-5 gap-5">
+          <p class="text-lg">
+            Beating cancer always begins with early detection.
+          </p>
+          <h1 class="font-bold text-2xl">
+            Before we proceed, please take a moment to read<br />
+            our requirement for screening and diagnostics.
+          </h1>
+          <p class="text-[#6B7280] text-sm">
+            if you belive you are able to comply with these requirements, click
+            on “Continue”
+          </p>
+          <h1 class="font-bold text-2xl">Requirements:</h1>
+          <div class="flex flex-col gap-5">
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>Laboratory Request from Doctor</p>
+            </div>
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>Barangay Certification or Certificate of Indigency</p>
+            </div>
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>One 1x1 Photo</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex w-full justify-between gap-8">
+          <a
+            href="../registration/registrationStep3.html"
+            class="text-black text-center py-2 w-full border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            I can’t comply
+          </a>
+          <a
+            id="requirement_page_continue_btn"
+            class="bg-[#749AB6] text-center font-bold text-white py-2 w-full border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            Continue
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      id="question_page"
+      class="hidden h-screen w-[75%] flex flex-col gap-8 bg-[#F5F7F9] p-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Beneficiary registration</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 05/06</p>
+          <h1 class="font-bold text-[#6B7280]">
+            Screening and<br />
+            Diagnostics
+          </h1>
+        </div>
+      </div>
+      <div class="bg-white p-5 flex flex-col gap-12 rounded-2xl py-9">
+        <div class="flex flex-col px-5 gap-5">
+          <h1 class="font-bold text-2xl">
+            What type of screening and diagnostic test do<br />
+            you need assistance with?
+          </h1>
+          <p class="text-[#6B7280] text-sm">(ex. mammogram, MRI, etc.)</p>
+          <input
+            type="text"
+            class="border-b border-b-[#000] w-[60%] py-3 focus:outline-none"
+            placeholder="Type your answer here..."
+          />
+        </div>
+        <div class="flex w-full justify-between gap-8">
+          <a
+            id="question_page_back_btn"
+            class="text-black text-center py-2 w-full border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            Back
+          </a>
+          <a
+            id="question_page_next_btn"
+            class="bg-[#749AB6] text-center font-bold text-white py-2 w-full border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            Next
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      id="documents_page"
+      class="hidden h-screen w-[75%] flex flex-col gap-8 bg-[#F5F7F9] p-12 overflow-auto"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 class="font-bold text-2xl">Beneficiary registration</h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 06/06</p>
+          <h1 class="font-bold text-[#6B7280]">
+            Screening and<br />
+            Diagnostics
+          </h1>
+        </div>
+      </div>
+      <div class="bg-white p-5 flex flex-col gap-12 rounded-2xl py-9">
+        <div class="flex flex-col px-5 gap-5">
+          <h1 class="text-2xl">
+            If you have any of the required documents with you right now, you
+            may attach theme here. If not, you can click on “Submit” to skip
+            this step.
+            <span class="font-bold"
+              >Please limit your upload to only the documents required.</span
+            >
+          </h1>
+          <p class="text-[#6B7280] text-sm">
+            You can only attach one at a time. For multiple docuements, attach
+            your first document and click “Submit”
+          </p>
+          <h1 class="font-bold text-2xl">
+            Upload the following documents one at a time
+          </h1>
+          <div class="flex flex-col gap-5">
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>Laboratory Request from Doctor</p>
+            </div>
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>Barangay Certification or Certificate of Indigency</p>
+            </div>
+            <div class="flex gap-5">
+              <img
+                src="../../static/images/registration/check.png"
+                alt="Check mark"
+                class="h-6 w-6"
+              />
+              <p>One 1x1 Photo</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center py-10 bg-[#F0F2F5] rounded-lg"
+          >
+            <label
+              for="file-upload"
+              class="flex flex-col w-[50%] items-center justify-center hover:bg-[#F2F2F2] rounded-lg p-8 cursor-pointer"
+            >
+              <div class="p-1 rounded-full bg-[#749AB6]">
+                <img
+                  src="../../static/images/registration/uploadicon.png"
+                  alt="Upload icon"
+                />
+              </div>
+              <p class="mt-4 font-medium text-gray-700">
+                Choose file or drag here
+              </p>
+              <p class="mt-1 text-sm text-gray-500">Size limit: 10MB</p>
+              <input id="file-upload" type="file" class="hidden" />
+            </label>
+          </div>
+        </div>
+        <div class="flex w-full justify-between gap-8">
+          <a
+            id="documents_page_back_btn"
+            class="text-black text-center py-2 w-full border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            Back
+          </a>
+          <a
+            href="../login_preenrollment/login.html"
+            id="documents_page_accept_button"
+            class="bg-[#749AB6] text-center font-bold text-white py-2 w-full border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            Submit
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="../../static/js/login_registration/registrationStep4A.js"></script>
+  </body>
+</html>

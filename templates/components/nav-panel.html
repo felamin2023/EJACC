@@ -1,0 +1,95 @@
+<div
+  class="flex flex-col h-screen justify-start gap-20 px-5 py-7 bg-[#749AB6] w-full"
+>
+  <div class="flex justify-start items-center gap-5 px-3">
+    <img
+      src="../../static/images/logo_white_text.png"
+      class="h-16 w-16"
+      alt="Rafi Logo"
+    />
+    <h1 class="font-bold text-2xl text-white">
+      CARES <br />
+      Platform
+    </h1>
+  </div>
+  <div>
+    <div>
+      <a
+        data-page="home"
+        class="group flex items-center gap-3 px-5 py-3 rounded-lg hover:bg-[#F0F2F5] cursor-pointer"
+      >
+        <img
+          src="../../static/images/navigation/homeicon.png"
+          alt="Home icon"
+          class="h-5 w-5 filter brightness-0 invert group-hover:invert-0 group-hover:brightness-100"
+        />
+        <p
+          class="text-white text-md group-hover:text-[#749AB6] group-hover:font-bold"
+        >
+          Home
+        </p>
+      </a>
+      <a
+        data-page="application"
+        class="group flex items-center gap-3 px-5 py-3 rounded-lg hover:bg-[#F0F2F5] cursor-pointer"
+      >
+        <img
+          src="../../static/images/navigation/applicationstatus.png"
+          alt="Home icon"
+          class="h-5 w-5 filter brightness-0 invert group-hover:invert-0 group-hover:brightness-100"
+        />
+        <p
+          class="text-white text-md group-hover:text-[#749AB6] group-hover:font-bold"
+        >
+          Application Status
+        </p>
+      </a>
+      <a>
+        <div
+          id="dropdownButton"
+          class="group flex justify-between pr-3 items-center gap-7 hover:bg-[#F0F2F5] items-center pl-5 py-3 rounded-lg"
+        >
+          <div class="flex justify-center items-center gap-3">
+            <img
+              id="servicesIcon"
+              src="../../static/images/navigation/servicesicon.png"
+              alt="Services icon"
+              class="h-5 w-5 filter brightness-0 invert group-hover:invert-0 group-hover:brightness-100"
+            />
+            <h1
+              id="servicesText"
+              class="text-white text-md group-hover:text-[#749AB6] group-hover:font-bold"
+            >
+              Services
+            </h1>
+          </div>
+          <img
+            id="dropdownArrow"
+            src="../../static/images/navigation/dropdownarrow.png"
+            alt="Dropdown arrow"
+            class="filter brightness-0 invert h-[8px] w-[13px] group-hover:invert-0 group-hover:brightness-100"
+          />
+        </div>
+        <div id="dropdownMenu" class="hidden w-full flex flex-col items-end">
+          <a
+            href="#"
+            class="dropdown-item rounded-lg px-4 text-white hover:font-bold hover:text-[#749AB6] block w-[87%] py-2 hover:bg-[#F0F2F5]"
+            >Cancer Screening</a
+          >
+          <a
+            data-page="cancermanagement"
+            href="#"
+            class="dropdown-item rounded-lg px-4 text-white hover:font-bold hover:text-[#749AB6] block w-[87%] py-2 hover:bg-[#F0F2F5]"
+            >Cancer Management</a
+          >
+          <a
+            href="#"
+            class="dropdown-item rounded-lg px-4 text-white hover:font-bold hover:text-[#749AB6] block w-[87%] py-2 hover:bg-[#F0F2F5]"
+            >Survivorship</a
+          >
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<script src="../../static/js/mainpage/navigation.js"></script>

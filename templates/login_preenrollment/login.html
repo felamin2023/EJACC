@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARES Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex w-full h-screen items-center justify-start bg-gray1">
+    <div
+      id="left-panel"
+      class="flex flex-col h-screen items-center justify-between py-5 bg-[#749AB6] w-[25%]"
+    >
+      <div class="flex flex-col gap-5">
+        <img
+          src="../../static/images/logo_white_text.png"
+          alt="RAFFI LOGO"
+          class="h-16 w-16"
+        />
+        <h1 class="text-4xl font-bold text-white">
+          Welcome!<br />
+          to the CARES<br />Platform
+        </h1>
+        <p class="text-white text-sm">
+          Providing seamless and efficient<br />
+          care for cancer patients
+        </p>
+      </div>
+
+      <img
+        src="../../static/images/registration/patientdoc.png"
+        alt="Patient Doc picture"
+        class="w-[75%]"
+      />
+    </div>
+    <div
+      id="right-panel"
+      class="bg-[#F0F2F5] w-[75%] h-screen flex flex-col items-center justify-between py-8"
+    >
+      <div class="flex flex-col gap-2 items-center justify-center">
+        <h2 class="text-5xl font-bold text-[#84a6bd]">
+          Log in to Your Account
+        </h2>
+        <p class="text-center text-base text-black">
+          Access your account to manage patient <br />
+          services with ease.
+        </p>
+      </div>
+
+      <form
+        action=""
+        method="POST"
+        class="flex flex-col items-center gap-2 bg-white w-full max-w-md rounded-xl shadow px-8 py-6"
+      >
+        <div class="w-full space-y-3 mb-3">
+          <div class="flex gap-2 flex-col">
+            <label class="">Email</label>
+            <input
+              type="text"
+              class="border-[#E2E2E2] border-[1px] rounded-md p-2"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Password</label>
+            <input
+              type="password"
+              class="border-[#E2E2E2] border-[1px] rounded-md p-2"
+              placeholder="Enter your password"
+            />
+          </div>
+        </div>
+        <button
+          id="login-button"
+          class="w-full font-bold bg-[#749AB6] text-white py-2 w-[45%] border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+        >
+          Login
+        </button>
+        <p class="text-sm text-black">
+          Don't have an account?
+          <a
+            href="../registration/registration.html"
+            class="text-[#84a6bd] font-semibold hover:underline"
+            >Sign Up</a
+          >
+        </p>
+        <!-- Or + SSO -->
+        <div class="w-full flex items-center my-2">
+          <hr class="flex-grow border-gray-200" />
+          <span class="mx-4 text-gray-400">Or</span>
+          <hr class="flex-grow border-gray-200" />
+        </div>
+        <button
+          class="flex items-center text-sm w-full bg-[#f3f7fa] border py-2 rounded-full justify-center hover:bg-gray-100"
+        >
+          <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24">
+            <rect fill="#f35325" x="2" y="2" width="9" height="9" />
+            <rect fill="#81bc06" x="13" y="2" width="9" height="9" />
+            <rect fill="#05a6f0" x="2" y="13" width="9" height="9" />
+            <rect fill="#ffba08" x="13" y="13" width="9" height="9" />
+          </svg>
+          Sign up with Microsoft Single Sign-on
+        </button>
+      </form>
+    </div>
+    <div
+      id="reset_password_panel"
+      class="hidden bg-[#F0F2F5] w-[75%] h-screen flex flex-col items-center justify-center gap-5"
+    >
+      <div class="flex flex-col gap-2 items-center justify-center">
+        <h2 class="text-3xl font-bold">Reset Your Password</h2>
+        <p class="text-center text-base text-black">
+          You must change your password before accessing <br />
+          your account.
+        </p>
+      </div>
+      <form
+        action=""
+        method="POST"
+        class="flex flex-col items-center gap-6 bg-white w-full max-w-md rounded-xl shadow px-8 py-6"
+      >
+        <div class="w-full space-y-3 mb-3">
+          <div class="flex gap-2 flex-col">
+            <label class="">Old Password</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="11"
+                    width="18"
+                    height="11"
+                    rx="2"
+                    ry="2"
+                    stroke-width="2"
+                  />
+                  <path d="M7 11V7a5 5 0 0110 0v4" stroke-width="2" />
+                </svg>
+              </div>
+              <input
+                type="password"
+                class="border-[#E2E2E2] border-[1px] rounded-md p-2 pl-10 w-full"
+              />
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">New Password</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="11"
+                    width="18"
+                    height="11"
+                    rx="2"
+                    ry="2"
+                    stroke-width="2"
+                  />
+                  <path d="M7 11V7a5 5 0 0110 0v4" stroke-width="2" />
+                </svg>
+              </div>
+              <input
+                type="password"
+                class="border-[#E2E2E2] border-[1px] rounded-md p-2 pl-10 w-full"
+              />
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Confirm New Password</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="11"
+                    width="18"
+                    height="11"
+                    rx="2"
+                    ry="2"
+                    stroke-width="2"
+                  />
+                  <path d="M7 11V7a5 5 0 0110 0v4" stroke-width="2" />
+                </svg>
+              </div>
+              <input
+                type="password"
+                class="border-[#E2E2E2] border-[1px] rounded-md p-2 pl-10 w-full"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          id="reset-password-button"
+          class="w-full font-bold bg-[#749AB6] text-white py-2 w-[45%] border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+        >
+          Reset Password
+        </button>
+      </form>
+    </div>
+    <div
+      id="successfully_reset_password_panel"
+      class="hidden h-screen w-full flex flex-col items-center p-5 gap-5"
+    >
+      <img
+        src="../../static/images/logo_black_text.png"
+        class="h-[70px] mb-10"
+        alt="RAFI LOGO"
+      />
+      <img
+        src="../../static/images/login/check_mark.png"
+        class="h-[95px]"
+        alt="RAFI LOGO"
+      />
+      <h2 class="text-5xl font-bold text-center">
+        Your <span class="text-[#749AB6]">password</span> has been reset <br />
+        successfully!
+      </h2>
+      <p class="text-sm">You can now use your new password to log in.</p>
+      <div class="w-full flex flex-col items-center justify-center gap-6">
+        <a
+          href="../login_preenrollment/preenrollment.html"
+          class="text-center font-bold bg-[#749AB6] text-white py-3 w-[25%] border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+        >
+          Continue
+        </a>
+        <hr class="w-[45%] border-[#6B7280]" />
+      </div>
+    </div>
+    <script src="../../static/js/login_registration/login.js"></script>
+  </body>
+</html>

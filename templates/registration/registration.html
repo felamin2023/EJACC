@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex w-full h-screen items-center justify-start bg-gray1">
+    <div
+      class="flex flex-col h-screen items-center justify-between py-5 bg-[#749AB6] w-[25%]"
+    >
+      <div class="flex flex-col gap-5">
+        <img
+          src="../../static/images/logo_white_text.png"
+          alt="RAFFI LOGO"
+          class="h-16 w-16"
+        />
+        <h1 class="text-4xl font-bold text-white">
+          Welcome!<br />
+          to the CARES<br />Platform
+        </h1>
+        <p class="text-white text-sm">
+          Providing seamless and efficient<br />
+          care for cancer patients
+        </p>
+      </div>
+
+      <img
+        src="../../static/images/registration/patientdoc.png"
+        alt="Patient Doc picture"
+        class="w-[75%] h-"
+      />
+    </div>
+    <div
+      id="right-panel"
+      class="bg-[#F0F2F5] w-[75%] h-screen flex flex-col items-center justify-between py-7"
+    >
+      <h2 class="text-5xl font-bold text-[#84a6bd]">Register Now!</h2>
+      <p class="text-center text-base text-black">
+        Select your role to proceed with<br />
+        registration and access the right services tailored<br />
+        for you.
+      </p>
+      <div class="bg-white w-full max-w-md rounded-xl shadow px-8 py-6">
+        <label class="block text-gray-700 font-medium mb-3"
+          >Select User Type</label
+        >
+        <div class="space-y-3 mb-3">
+          <button
+            id="beneficiary-btn"
+            class="flex gap-5 w-full text-[#000] hover:text-[#636c72] font-bold text-xl px-4 py-3 rounded-lg hover:bg-[#C5D7E5] focus:outline-none"
+          >
+            <img
+              src="../../static/images/registration/benlogo.png"
+              alt="RAFFI LOGO"
+              class="h-6 w-6"
+            />
+            Beneficiary
+          </button>
+          <button
+            id="rhu-btn"
+            class="flex gap-5 w-full text-[#000] hover:text-[#636c72] font-bold text-xl px-4 py-3 rounded-lg hover:bg-[#C5D7E5] focus:outline-none"
+          >
+            <img
+              src="../../static/images/registration/rhulogo.png"
+              alt="RAFFI LOGO"
+              class="h-6 w-6"
+            />
+            RHU
+          </button>
+          <button
+            id="private-btn"
+            class="flex gap-5 w-full text-[#000] hover:text-[#636c72] font-bold text-xl px-4 py-3 rounded-lg hover:bg-[#C5D7E5] focus:outline-none"
+          >
+            <img
+              src="../../static/images/registration/privatelogo.png"
+              alt="RAFFI LOGO"
+              class="h-6 w-6"
+            />
+            Private/Partner
+          </button>
+        </div>
+        <!-- Or + SSO -->
+        <div class="flex items-center my-4">
+          <hr class="flex-grow border-gray-200" />
+          <span class="mx-4 text-gray-400">Or</span>
+          <hr class="flex-grow border-gray-200" />
+        </div>
+        <button
+          class="flex items-center w-full bg-[#f3f7fa] border py-2 rounded-full justify-center hover:bg-gray-100"
+        >
+          <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24">
+            <rect fill="#f35325" x="2" y="2" width="9" height="9" />
+            <rect fill="#81bc06" x="13" y="2" width="9" height="9" />
+            <rect fill="#05a6f0" x="2" y="13" width="9" height="9" />
+            <rect fill="#ffba08" x="13" y="13" width="9" height="9" />
+          </svg>
+          Sign up with Microsoft Single Sign-on
+        </button>
+      </div>
+      <p class="text-sm text-black">
+        Already have an account?
+        <a
+          href="../login_preenrollment/login.html"
+          class="text-[#84a6bd] font-semibold hover:underline"
+          >Sign In</a
+        >
+      </p>
+    </div>
+
+    <div
+      id="note"
+      class="w-[75%] bg-[#F5F7F9] flex flex-col h-screen gap-5 px-8 py-8 hidden"
+    >
+      <h1 id="registration-heading" class="font-bold text-xl"></h1>
+      <div
+        class="flex flex-col gap-5 bg-white w-full rounded-xl shadow px-8 py-6"
+      >
+        <h1 class="font-bold text-[17px]">
+          NOTE: Completion of this form does not guarantee assistance from RAFI
+          and Eduardo J. Aboitiz Cancer Center (EJACC). All applications are
+          subject to review by the EJACC team.<br /><br />Any personal
+          information that you share within this registration form will be
+          treated as sensitive information and will only be used for checking
+          your eligibility, processing your application, and sending you updates
+          on your application. Your information will not be shared outside of
+          RAFI without your permission.This question is required.*
+        </h1>
+        <div class="flex justify-around w-full">
+          <button
+            id="i-dont-accept-btn"
+            class="text-black py-2 w-[45%] border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            I Don't Accept
+          </button>
+          <button
+            id="i-accept-btn"
+            class="bg-[#749AB6] font-bold text-white py-2 w-[45%] border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            I Accept
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="fill_up_form"
+      class="h-screen w-[75%] flex flex-col gap-12 bg-[#F5F7F9] py-12 px-12 overflow-auto hidden"
+    >
+      <div class="w-full flex justify-between px-9">
+        <h1 id="fill_up_form_heading" class="font-bold text-2xl"></h1>
+        <div class="flex text-right flex-col">
+          <p class="text-sm">STEP 01/02</p>
+          <h1 class="font-bold text-[#6B7280]">Info</h1>
+        </div>
+      </div>
+      <form
+        action=""
+        method="post"
+        class="bg-white p-9 flex flex-col gap-8 rounded-2xl"
+      >
+        <h1 id="details_title" class="font-bold text-2xl">Personal Details</h1>
+        <div
+          id="beneficiary_fields"
+          class="grid grid-cols-2 gap-x-10 gap-y-5 hidden"
+        >
+          <div class="flex gap-2 flex-col">
+            <label class="">First Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Last Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Date of Birth</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="date"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="Select date"
+              />
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Age</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="">Email</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="email"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="ejacc@gmail.com"
+              />
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Phone Number</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="5"
+                    y="2"
+                    width="14"
+                    height="20"
+                    rx="2"
+                    ry="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></rect>
+                  <line
+                    x1="12"
+                    y1="18"
+                    x2="12"
+                    y2="18"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></line>
+                  <line
+                    x1="8"
+                    y1="5"
+                    x2="16"
+                    y2="5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></line>
+                </svg>
+              </div>
+              <input
+                type="tel"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="123-456-7890"
+              />
+            </div>
+          </div>
+
+          <div class="flex gap-2 flex-col">
+            <label class="">Are you a resident of Cebu (province)?</label>
+            <div>
+              <p class="text-[11px] text-[#B2B2B2]">
+                Our cancer care services are currently limited to residents of
+                Cebu.
+              </p>
+              <div class="relative">
+                <select
+                  class="border-[#6B7280] w-full border-[1px] rounded-md p-2 bg-white appearance-none pr-8"
+                >
+                  <option value="" disabled selected>Yes or No</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    class="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end gap-2 flex-col h-23">
+            <label class="">LGU</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col col-span-2">
+            <label class="">Address</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+        </div>
+        <div id="rhu_fields" class="grid grid-cols-2 gap-x-10 gap-y-5 hidden">
+          <div class="flex justify-end gap-2 flex-col h-23">
+            <label class="text-[#6B7280]">LGU</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Address</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Phone Number</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="5"
+                    y="2"
+                    width="14"
+                    height="20"
+                    rx="2"
+                    ry="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></rect>
+                  <line
+                    x1="12"
+                    y1="18"
+                    x2="12"
+                    y2="18"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></line>
+                  <line
+                    x1="8"
+                    y1="5"
+                    x2="16"
+                    y2="5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></line>
+                </svg>
+              </div>
+              <input
+                type="tel"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="123-456-7890"
+              />
+            </div>
+          </div>
+
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Email</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="email"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="ejacc@gmail.com"
+              />
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Representative First Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Last Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col col-span-2">
+            <label class="text-[#6B7280]">Official Representative Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+        </div>
+        <div
+          id="private_fields"
+          class="grid grid-cols-2 gap-x-10 gap-y-5 hidden"
+        >
+          <div class="flex justify-end gap-2 flex-col h-23">
+            <label class="text-[#6B7280]">Institution Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Email</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="email"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="ejacc@gmail.com"
+              />
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Phone Number</label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="5"
+                    y="2"
+                    width="14"
+                    height="20"
+                    rx="2"
+                    ry="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></rect>
+                  <line
+                    x1="12"
+                    y1="18"
+                    x2="12"
+                    y2="18"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></line>
+                  <line
+                    x1="8"
+                    y1="5"
+                    x2="16"
+                    y2="5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></line>
+                </svg>
+              </div>
+              <input
+                type="tel"
+                class="bg-white border border-[#6B7280] text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-10 p-2.5"
+                placeholder="123-456-7890"
+              />
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Address</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Representative First Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+          <div class="flex gap-2 flex-col">
+            <label class="text-[#6B7280]">Last Name</label>
+            <input
+              type="text"
+              class="border-[#6B7280] border-[1px] rounded-md p-2"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h1 id="privacy_heading" class="font-bold text-2xl"></h1>
+          <div class="flex gap-2">
+            <input
+              type="checkbox"
+              id="myCheckbox"
+              name="myCheckbox"
+              class="accent-[#749AB6]"
+            />
+            <p class="underline text-[12px]">
+              Form notice & Data privacy notice
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-between w-full">
+          <a
+            id="back-btn"
+            class="text-black text-center py-2 w-[45%] border-[1px] hover:bg-[#F5F7F9] border-black hover:border-white rounded-md"
+          >
+            BACK
+          </a>
+          <a
+            href="registrationStep3.html"
+            class="text-center font-bold bg-[#749AB6] text-white py-2 w-[45%] border-[1px] border-[#749AB6] hover:border-[#C5D7E5] hover:bg-[#C5D7E5] rounded-md"
+          >
+            SUBMIT
+          </a>
+        </div>
+      </form>
+    </div>
+    <script src="../../static/js/login_registration/registration.js"></script>
+  </body>
+</html>
